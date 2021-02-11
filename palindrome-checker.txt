@@ -1,0 +1,19 @@
+function palindrome(str) {
+str = str.toLowerCase().split(/\W+|\s+|_/g).join("");
+var result = "";
+ for(var i=str.length -1; i>=0; i--){
+   result += str[i];
+ }
+ var newString = result;
+ if(str === newString){
+   return true;
+ }else{
+   return false;
+ }
+}
+console.log(palindrome("eye"));
+console.log(palindrome("0_0 (: /-\ :) 0-0"));
+console.log(palindrome("My age is 0, 0 si ega ym."));
+console.log(palindrome("_eye"));
+console.log(palindrome("A man, a plan, a canal. Panama"));
+console.log(palindrome("nope"))
